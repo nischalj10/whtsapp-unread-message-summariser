@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Unread Messages Array",
+  "version": "1.0",
+  "description": "Get an array of unread messages from WhatsApp Web group chats",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://web.whatsapp.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content2.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {}
+}
